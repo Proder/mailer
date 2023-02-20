@@ -22,7 +22,7 @@ app.post("/",async(req,res)=> {
             from: 'shahdhruvmayank@gmail.com',
             to: 'shahdhruvmayank@gmail.com',
             subject: "Brochure Downloaded",
-            text: `Name: ${req.body.name} \nPhone Number ${req.body.ph_number} \nOrg ${req.body.org} \nEmail ${req.body.mail}` 
+            text: `The details of the individual is as under:\n\nName: ${req.body.name} \nPhone: ${req.body.ph_number} \nOrganization: ${req.body.org} \nEmail: ${req.body.mail}` 
         }
 
         let info = await transporter.sendMail(mailOptions)
