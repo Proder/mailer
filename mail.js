@@ -11,7 +11,7 @@ const port=process.env.PORT || 3000
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'shahdhruvmayank@gmail.com',
+        user: 'solutiongxp@gmail.com',
         pass: process.env.key
     }
 });
@@ -20,7 +20,7 @@ app.post("/",async(req,res)=> {
     try {
         let mailOptions = {
             from: 'solutiongxp@gmail.com',
-            to: 'aayush.2104@gmail.com',
+            to: 'solutiongxp@gmail.com',
             subject: `${req.body.name} downloaded Brochure`,
             text: `The details of the individual is as under:\n\nName: ${req.body.name} \nPhone: ${req.body.ph_number} \nOrganization: ${req.body.org} \nEmail: ${req.body.mail}` 
         }
