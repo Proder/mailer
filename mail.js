@@ -19,9 +19,9 @@ let transporter = nodemailer.createTransport({
 app.post("/",async(req,res)=> {
     try {
         let mailOptions = {
-            from: 'shahdhruvmayank@gmail.com',
-            to: 'shahdhruvmayank@gmail.com',
-            subject: "Brochure Downloaded",
+            from: 'daxesh@gxpsolutions.in',
+            to: 'devarshpatel197@gmail.com',
+            subject: `${req.body.name} downloaded Brochure`,
             text: `The details of the individual is as under:\n\nName: ${req.body.name} \nPhone: ${req.body.ph_number} \nOrganization: ${req.body.org} \nEmail: ${req.body.mail}` 
         }
 
